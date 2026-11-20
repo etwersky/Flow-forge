@@ -1,0 +1,11 @@
+{
+  "name": "flowforge",
+  "version": "0.1.0",
+  "description": "A tiny workflow automation engine: define steps in JSON, run them with retries and shared context.",
+  "bin": { "flowforge": "bin/flowforge.js" },
+  "scripts": {
+    "start": "node bin/flowforge.js workflows/nightly-report.json",
+    "test": "node --test tests/"
+  },
+  "license": "MIT"
+}

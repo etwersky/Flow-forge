@@ -1,0 +1,9 @@
+{
+  "name": "Nightly report",
+  "steps": [
+    { "id": "pull", "type": "fetch", "mockItems": ["alpha", "beta", "gamma"] },
+    { "id": "announce", "type": "log", "message": "Fetched {{pull.items}} (status {{pull.status}})" },
+    { "id": "shout", "type": "transform", "from": "pull.status", "op": "upper" },
+    { "id": "notify", "type": "log", "message": "Report ready: {{shout}}" }
+  ]
+}
